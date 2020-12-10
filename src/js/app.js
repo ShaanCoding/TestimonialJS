@@ -27,6 +27,10 @@ createCustomer("customer-2.jpeg", 'Amy', 'There are many variations of passages 
 createCustomer("customer-3.jpeg", 'Tyrell', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text.')
 createCustomer("customer-4.jpeg", 'Wanda', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')
 
+customerImage.src = customers[index].image;
+customerName.textContent = customers[index].name;
+customerText.textContent = customers[index].quote;
+
 let prevBtn = document.getElementById('prevBtn');
 prevBtn.addEventListener("click", function(e)
 {
