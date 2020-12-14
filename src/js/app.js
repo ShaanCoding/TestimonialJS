@@ -19,15 +19,12 @@ const refreshCard = () => {
     customerText.textContent = customers[index].quote;
 }
 
-let prevBtn = document.getElementById('prevBtn');
-let nextBtn = document.getElementById('nextBtn');
-
-prevBtn.addEventListener("click", (e) => {
+document.getElementById('prevBtn').addEventListener("click", (e) => {
     index = ((index === 0) ? customers.length : index) - 1;
     refreshCard();
 });
 
-nextBtn.addEventListener("click", (e) => {
+document.getElementById('nextBtn').addEventListener("click", (e) => {
     index = ++index % customers.length;
     refreshCard();
 });
