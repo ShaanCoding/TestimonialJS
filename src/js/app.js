@@ -1,7 +1,3 @@
-const customerImage = document.getElementById('customer-img');
-const customerName = document.getElementById('customer-name');
-const customerText = document.getElementById('customer-text');
-const buttons = document.querySelectorAll('btn');
 let index = 0;
 
 // json - pmuch tthe same as es6 classes
@@ -14,9 +10,9 @@ const customers = [
 ];
 
 const refreshCard = () => {
-    customerImage.src = customers[index].image;
-    customerName.textContent = customers[index].name;
-    customerText.textContent = customers[index].quote;
+    document.getElementById('customer-img').src = customers[index].image;
+    document.getElementById('customer-name').textContent = customers[index].name;
+    document.getElementById('customer-text').textContent = customers[index].quote;
 }
 
 document.getElementById('prevBtn').addEventListener("click", (e) => {
